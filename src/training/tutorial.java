@@ -1,27 +1,23 @@
 
 
 package training;
-import java.util.Random;
+
+import java.awt.FlowLayout;
 
 
 public class tutorial {
 	
 	public static void main(String Args[]){
 	
-	int dicearray[] = new int[7];
+		String fn = JOptionPane.showInputDialog("Enter First Number: ");
+		String ln = JOptionPane.showInputDialog("Enter Second Number: ");
 	
-	
-	Random rand = new Random();
-	
-	for(int roll = 1; roll < 1000; roll++)
-	{
-		++dicearray[1 + rand.nextInt(6)];
-	}
+		int num1 = Integer.parseInt(fn);
+		int num2 = Integer.parseInt(ln);
 		
-	for(int i = 0; i < dicearray.length; i++)
-	{
-		System.out.println(i + "\t" + dicearray[i]);
-	
-	}
-}
+		
+		int sum = num1 + num2;
+		
+		JOptionPane.showMessageDialog(null, "The Answer is: " + sum, "SUM" , JOptionPane.PLAIN_MESSAGE);
+		}
 }
